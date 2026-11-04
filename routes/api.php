@@ -6,7 +6,7 @@ use App\Models\User;
 Route::get('/users', function () {
     return response()->json([
         'status' => true,
-        'message' => 'Your Users API working successfully',
+        'message' => 'User LISTS',
         'data' => User::latest('id')->paginate(25)
     ]);
 });
